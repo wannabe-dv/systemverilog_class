@@ -1,0 +1,42 @@
+class packet
+....
+...
+....
+endclass
+
+packet p
+p = new
+
+class packet is a class
+packet is object
+p is the handle to the object
+
+1. class constructor can be declared local or protected.
+2. class constructor cannot be declared static or virtual
+3. static variables of a class can be accessed by static subroutines.
+4. static class properties can be accessed without creating/constructing the class
+5. static task - legal
+6. task static - illegal
+7. shallow copy
+    packet p1, p2;
+    p1 = new;
+    p2 = new p1;
+7. deep copy
+    $cast(clone, orig.clone())
+8. $cast(destination, source) / $cast(c, p)
+9. data encapsulation and data hiding
+    local - only visible within the class
+    example : 
+      class Packet;
+        local integer i;
+        function integer compare (Packet other);
+        compare = (this.i == other.i);
+        endfunction
+      endclass
+    protected - only visible to the class containing it and to its extended classes
+    public - visible to everybody
+10.abstract class
+    virtual class base
+11.abstract class constructor should not be called directly.
+12.it should have pure virtual function/task. It should not have any body and the body should be implemented in the extended class
+13.abstract classes can be used to declared variable of its type
