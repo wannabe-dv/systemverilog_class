@@ -23,6 +23,12 @@ p is the handle to the object
     p2 = new p1;
 7. deep copy
     $cast(clone, orig.clone())
+    function void do_copy (uvm_object rhs);
+        class_name rhs_;
+
+        $cast(rhs_, rhs);
+        var = rhs_.var;
+    endfunction
 8. $cast(destination, source) / $cast(c, p)
 9. data encapsulation and data hiding
     local - only visible within the class
