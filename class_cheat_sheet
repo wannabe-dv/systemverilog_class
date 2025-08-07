@@ -29,6 +29,11 @@ p is the handle to the object
         $cast(rhs_, rhs);
         var = rhs_.var;
     endfunction
+
+    OR 
+
+    class a, b;
+    a.copy(b);
 8. $cast(destination, source) / $cast(c, p)
 9. data encapsulation and data hiding
     local - only visible within the class
