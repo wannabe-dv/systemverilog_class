@@ -15,8 +15,8 @@ p is the handle to the object
 2. class constructor cannot be declared static or virtual
 3. static variables of a class can be accessed by static subroutines.
 4. static class properties can be accessed without creating/constructing the class
-5. static task - legal
-6. task static - illegal
+5. static task - legal - indicates lifetime of the task
+6. task static - illegal - indicates lifetime of the variables of the task
 7. shallow copy
     packet p1, p2;
     p1 = new;
